@@ -1,9 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const cors = require('cors');
 const dotenv=require('dotenv');
 dotenv.config();
 const app = express();
+app.use(cors());
 const port = process.env.PORT;
 // Add body-parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
